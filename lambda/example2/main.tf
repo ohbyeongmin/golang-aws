@@ -91,6 +91,8 @@ resource "aws_iam_role_policy_attachment" "lambda_policy" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
+
+// 1분마다 호출하는 스케줄러 생성
 resource "aws_cloudwatch_event_rule" "every_one_minute" {
   name = "every-one-minute"
   description = "Fires every one minutes"
